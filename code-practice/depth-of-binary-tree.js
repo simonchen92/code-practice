@@ -17,10 +17,9 @@
 
 // Solution
 
-let maxDepth = function(root) {
-    if (root === undefined || root === null) {
-       return 0 
-    }
-    return 1 + Math.max(maxDepth(root.left), maxDepth(root.right))
+const maxDepth = function (root) {
+  if (root === undefined || root === null) {
+    return 0
+  }
+  return 1 + Math.max(maxDepth(root.left), maxDepth(root.right))
 }
-

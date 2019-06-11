@@ -13,9 +13,10 @@
 // Input: ["H","a","n","n","a","h"]
 // Output: ["h","a","n","n","a","H"]
 
-// Solution 
+// Solution
 
-let reverseString = function(s) {
-    return s.reverse()
-};
+const reverseString = function (s) {
+  return s.reverse()
+}
 
+module.exports = reverseString

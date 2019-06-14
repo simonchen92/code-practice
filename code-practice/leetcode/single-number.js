@@ -13,18 +13,24 @@
 // Input: [4,1,2,1,2]
 // Output: 4
 
-// Solution 1 using XOR (bitwise) operator 
+// Solution 1 using XOR (bitwise) operator
 // XOR operation works because it's like XORing all the numbers by itself and leaves the odd one out
 
-let singleNumber = function(nums) {
-    return nums.reduce((a, b) => a ^ b, 0)
+const singleNumber = function (nums) {
+  return nums.reduce((a, b) => a ^ b, 0)
 }
 
 // Solution 2 using for loop to make it easier to understand but it has a O(n^2) time complexity due to the indexOf function
 
-let singleNumber = function(nums) {
-    for (let i = 0; i < nums.length; i++) {
-        if(nums.indexOf(nums[i]) === nums.lastIndexOf(nums[i]))
-            return nums[i]
+const singleNumberOne = function (nums) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums.indexOf(nums[i]) === nums.lastIndexOf(nums[i])) {
+      return nums[i]
     }
+  }
+}
+
+module.exports = {
+  singleNumber,
+  singleNumberOne
 }

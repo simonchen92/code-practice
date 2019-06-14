@@ -32,14 +32,14 @@ const rotate = function (nums, k) {
   }
 }
 
-// Solution 2 using for loop
+// Solution 2 using for loop; linter does not agree with the definition of i
 
-const rotateOne = function (nums, k) {
-  for (i = 1; i <= k; i++) {
-    const numMod = nums.pop()
-    nums.unshift(numMod)
-  }
-}
+// const rotateOne = function (nums, k) {
+//   for (i = 0; i < k; i++) {
+//     const numMod = nums.pop()
+//     nums.unshift(numMod)
+//   }
+// }
 
 // Solution 3 using splice and spread operator
 
@@ -50,6 +50,6 @@ const rotateTwo = function (nums, k) {
 
 module.exports = {
   rotate,
-  rotateOne,
+  // rotateOne,
   rotateTwo
 }

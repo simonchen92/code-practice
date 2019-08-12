@@ -28,8 +28,8 @@
 // The format of the strings will always be Europe and JavaScript.
 // All data will always be valid and uniform as in the example above.
 
-// Designed to allow mastering the use of higher-order functions. 
-// In JavaScript this includes methods like: forEach, filter, map, reduce, some, every, find, findIndex. 
+// Designed to allow mastering the use of higher-order functions.
+// In JavaScript this includes methods like: forEach, filter, map, reduce, some, every, find, findIndex
 // Other approaches to solving the katas are of course possible.
 
 // Solution 1-liner

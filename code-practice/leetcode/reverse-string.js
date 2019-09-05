@@ -14,9 +14,40 @@
 // Output: ["h","a","n","n","a","H"]
 
 // Solution
+function reverseString (str) {
+  // Step 1. Use the split() method to return a new array
+  const splitString = str.split('') // let splitString = "hello".split("");
+  // ["h", "e", "l", "l", "o"]
 
-const reverseString = function (s) {
-  return s.reverse()
+  // Step 2. Use the reverse() method to reverse the new created array
+  const reverseArray = splitString.reverse() // let reverseArray = ["h", "e", "l", "l", "o"].reverse();
+  // ["o", "l", "l", "e", "h"]
+
+  // Step 3. Use the join() method to join all elements of the array into a string
+  const joinArray = reverseArray.join('') // let joinArray = ["o", "l", "l", "e", "h"].join("");
+  // "olleh"
+
+  // Step 4. Return the reversed string
+  return joinArray // "olleh"
 }
 
-module.exports = reverseString
+reverseString('hello')
+
+// 1 Liner solution for above
+const reverseString1 = function (str) {
+  return str.split('').reverse().join('')
+}
+
+reverseString1('hello')
+
+// Reverse string recursively
+const reverseString2 = str => {
+  if (str === '') {
+    return ''
+  } else {
+    console.log(str)
+    return reverseString2(str.substr(1)) + str.charAt(0)
+  }
+}
+
+console.log(reverseString2('hello'))

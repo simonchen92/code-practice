@@ -33,12 +33,17 @@ function reverseString (str) {
 
 reverseString('hello')
 
-// 1 Liner solution for above
+// Short-hand solution for the above
 const reverseString1 = function (str) {
   return str.split('').reverse().join('')
 }
 
 reverseString1('hello')
+
+// Alternate 1-Liner using ES6 syntax
+// const reverseString1 = str => str.split('').reverse().join('')
+
+// reverseString1('hello')
 
 // Reverse string recursively
 const reverseString2 = str => {

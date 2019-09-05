@@ -25,6 +25,5 @@ const d = Object.keys(obj)
 console.log(d)
 
 // Solution 3 using ES6 method called Set which is a built in function from JS to find unique values
-
 const someArray = [1, 2, 5, 2, 1, 8]
 console.log([...new Set(someArray)]) // Set normally returns an object so we use spread operator to make it display in an array

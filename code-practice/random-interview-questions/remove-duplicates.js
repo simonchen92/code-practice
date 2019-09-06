@@ -31,6 +31,7 @@ console.log([...new Set(someArray)]) // Set normally returns an object so we use
 console.log(Array.from(new Set(someArray)))
 
 // Solution 4 using filter method
+// Using indexOf to find the first element in which it can be found and if it matches the index then push to new array
 const anotherArray = [1, 2, 5, 2, 1, 8]
 const newFilterArray = anotherArray.filter((item, index) => {
   return anotherArray.indexOf(item) === index

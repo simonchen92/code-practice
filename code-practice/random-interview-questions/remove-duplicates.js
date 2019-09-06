@@ -13,17 +13,24 @@ for (let i = 0; i < len; i++) {
 
 console.log(b)
 
-// Solution 2 using for of loop
-const c = [1, 2, 5, 2, 1, 8]
-const obj = {}
+// // Solution 2 using for of loop
+// const c = [1, 2, 5, 2, 1, 8]
+// const obj = {}
 
-for (const i of c) {
-  obj[i] = true
-}
+// for (const i of c) {
+//   obj[i] = true
+// }
 
-const d = Object.keys(obj)
-console.log(d)
+// const d = Object.keys(obj)
+// console.log(d)
 
 // Solution 3 using ES6 method called Set which is a built in function from JS to find unique values
 const someArray = [1, 2, 5, 2, 1, 8]
 console.log([...new Set(someArray)]) // Set normally returns an object so we use spread operator to make it display in an array
+
+// Solution 4 using filter method
+const anotherArray = [1, 2, 5, 2, 1, 8]
+const newFilterArray = anotherArray.filter((item, index) => {
+  return anotherArray.indexOf(item) === index
+})
+console.log(newFilterArray)

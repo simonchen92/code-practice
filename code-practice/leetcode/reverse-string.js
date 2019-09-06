@@ -13,7 +13,7 @@
 // Input: ["H","a","n","n","a","h"]
 // Output: ["h","a","n","n","a","H"]
 
-// Solution
+// Solution 1 using the reverse built in method
 function reverseString (str) {
   // Step 1. Use the split() method to return a new array
   const splitString = str.split('') // let splitString = "hello".split("");
@@ -45,14 +45,29 @@ reverseString1('hello')
 
 // reverseString1('hello')
 
-// Reverse string recursively not using .reverse()
+// Solution 2 not using built in reverse method
 const reverseString2 = str => {
+  // create an empty string to host new string
+  let newString = ''
+  // The starting point of the loop will be (str.length - 1) which corresponds to the last character of the string, "o or 2 in this case"
+  // As long as i is greater than or equals 0, the loop will go on
+  // We decrement i after each iteration
+  for (let i = str.length - 1; i >= 0; i--) {
+    newString += str[i]
+  }
+  return newString
+}
+
+console.log(reverseString2('hello2'))
+
+// Solution 3
+// Reverse string recursively not using built in reverse functionality
+const reverseString3 = str => {
   if (str === '') {
     return ''
   } else {
-    console.log(str)
-    return reverseString2(str.substr(1)) + str.charAt(0)
+    return reverseString3(str.substr(1)) + str.charAt(0)
   }
 }
 
-console.log(reverseString2('hello'))
+console.log(reverseString3('hello3'))

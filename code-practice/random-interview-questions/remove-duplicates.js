@@ -27,6 +27,8 @@ console.log(b)
 // Solution 3 using ES6 method called Set which is a built in function from JS to find unique values
 const someArray = [1, 2, 5, 2, 1, 8]
 console.log([...new Set(someArray)]) // Set normally returns an object so we use spread operator to make it display in an array
+// Array.from() converts set back into an array as well
+console.log(Array.from(new Set(someArray)))
 
 // Solution 4 using filter method
 const anotherArray = [1, 2, 5, 2, 1, 8]

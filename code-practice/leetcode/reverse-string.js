@@ -45,7 +45,7 @@ reverseString1('hello')
 
 // reverseString1('hello')
 
-// Reverse string recursively
+// Reverse string recursively not using .reverse()
 const reverseString2 = str => {
   if (str === '') {
     return ''

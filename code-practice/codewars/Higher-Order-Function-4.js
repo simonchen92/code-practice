@@ -13,6 +13,21 @@
 // ];
 // your function should return Victoria, Puerto Rico
 
+// Direct link to Codewar Challenge
+// https://www.codewars.com/kata/coding-meetup-number-4-higher-order-functions-series-find-the-first-python-developer/train/javascript
+
+// Test Use
+const list1 = [
+  { firstName: 'Mark', lastName: 'G.', country: 'Scotland', continent: 'Europe', age: 22, language: 'JavaScript' },
+  { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 30, language: 'Python' },
+  { firstName: 'Emma', lastName: 'B.', country: 'Norway', continent: 'Europe', age: 19, language: 'Clojure' }
+]
+
+const list2 = [
+  { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 29, language: 'JavaScript' },
+  { firstName: 'Amar', lastName: 'V.', country: 'Bosnia and Herzegovina', continent: 'Europe', age: 32, language: 'Ruby' }
+]
+
 // Solution 1
 
 function getFirstPython (list) {
@@ -20,11 +35,12 @@ function getFirstPython (list) {
   return dev ? `${dev.firstName}, ${dev.country}` : 'There will be no Python developers'
 }
 
+console.log(getFirstPython(list1))
+console.log(getFirstPython(list2))
+
 // Solution 2 one - liner
 
 const getFirstPython1 = list => list.find(dev => dev.langage === 'Python' ? `${dev.firstName}, ${dev.country}` : 'There will be no Python developers')
 
-module.exports = {
-  getFirstPython,
-  getFirstPython1
-}
+console.log(getFirstPython1(list1))
+console.log(getFirstPython1(list2))

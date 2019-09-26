@@ -16,17 +16,33 @@
 // Notes:
 // The input array will always be valid and formatted as in the example above.
 
+// Direct Link to Codewar Challenge
+// https://www.codewars.com/kata/coding-meetup-number-3-higher-order-functions-series-is-ruby-coming/train/javascript
+
+// Test Use
+const list1 = [
+  { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+  { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
+  { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' }
+]
+
+const list2 = [
+  { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+  { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' }
+]
+
 // Solution 1
 
 function isRubyComing (list) {
   return list.some(developers => developers.language === 'Ruby')
 }
 
+console.log(isRubyComing(list1))
+console.log(isRubyComing(list2))
+
 // Solution 2 one-liner
 
 const isRubyComing1 = list => list.some(developers => developers.language === 'Ruby' ? developers : false)
 
-module.exports = {
-  isRubyComing,
-  isRubyComing1
-}
+console.log(isRubyComing1(list1))
+console.log(isRubyComing1(list2))

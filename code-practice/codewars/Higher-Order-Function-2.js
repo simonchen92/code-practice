@@ -33,6 +33,44 @@
 // In JavaScript this includes methods like: forEach, filter, map, reduce, some, every, find, findIndex
 // Other approaches to solving the katas are of course possible
 
+// Direct link to Codewar Challenge
+// https://www.codewars.com/kata/coding-meetup-number-2-higher-order-functions-series-greet-developers/train/javascript
+
+// Test Case
+const list1 = [
+  { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+  { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
+  { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' }
+]
+
+// Example of answer to list1
+// const answer = [
+//   { firstName: 'Sofia',
+//     lastName: 'I.',
+//     country: 'Argentina',
+//     continent: 'Americas',
+//     age: 35,
+//     language: 'Java',
+//     greeting: 'Hi Sofia, what do you like the most about Java?'
+//   },
+//   { firstName: 'Lukas',
+//     lastName: 'X.',
+//     country: 'Croatia',
+//     continent: 'Europe',
+//     age: 35,
+//     language: 'Python',
+//     greeting: 'Hi Lukas, what do you like the most about Python?'
+//   },
+//   { firstName: 'Madison',
+//     lastName: 'U.',
+//     country: 'United States',
+//     continent: 'Americas',
+//     age: 32,
+//     language: 'Ruby',
+//     greeting: 'Hi Madison, what do you like the most about Ruby?'
+//   }
+// ]
+
 // Solution 1
 
 const greetDevelopers = list => {
@@ -41,6 +79,8 @@ const greetDevelopers = list => {
   })
   return list
 }
+
+console.log(greetDevelopers(list1))
 
 // Solution 2
 
@@ -54,7 +94,4 @@ function greetDevelopers1 (developers) {
   return developers.map(addGreeting)
 }
 
-module.exports = {
-  greetDevelopers,
-  greetDevelopers1
-}
+console.log(greetDevelopers1(list1))

@@ -21,4 +21,4 @@ function getCount (str) {
 
 console.log(getCount('abracadabra')) // => 5
 console.log(getCount('encyclopedia')) // => 5
-console.log(getCount('pizza')) // => 5
+console.log(getCount('pizza')) // => 2

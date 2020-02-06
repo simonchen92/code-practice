@@ -28,6 +28,7 @@ function sum1 (a, b) {
     a = a.slice(0, -1)
     b = b.slice(0, -1)
   }
+  // Return results; If we are carrying add a 1 followed by result otherwise just return the result
   return carrying ? `1${result}` : result
 }
 

@@ -21,4 +21,5 @@ const missingNumber = function (nums) {
   return expectedNum - num
 }
 
-module.exports = missingNumber
+console.log(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]))
+console.log(missingNumber([6, 4, 2, 3, 7, 0, 1]))

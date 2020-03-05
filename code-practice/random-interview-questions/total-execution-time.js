@@ -15,11 +15,11 @@ function getTotalExecutionTime (arr, c) {
 
   for (let i = 0; i < arr.length; i++) {
     current = arr[i]
-    // If there is no value on array in result object we add 1 second in time
+    // If there is no value on current iteration of array in the result object we add 1 second in time
     // Or if result of current array of cooldown is less than time we add 1 sec in time
     if (!result[current] || result[current] + c < time) {
       result[current] = time += 1
-      // if our last time our current value plus cooldown is greater than time
+      // if our current value plus cooldown is greater than time
       // Our new last time would equal that time plus cooldown time plus one sec for execution
     } else {
       time = result[current] += c + 1

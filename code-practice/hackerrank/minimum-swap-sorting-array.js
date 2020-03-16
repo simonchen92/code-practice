@@ -15,10 +15,13 @@
 // arr: an unordered array of integers
 
 // Input Format -
-// The first line contains an integer, , the size of .
-// The second line contains  space-separated integers .
+// The first line contains an integer, n, the size of arr.
+// The second line contains n space-separated integers arr[i].
 
 // Constraints -
+// 1 <= n <= 10^5
+// 1 <= arr[i] <= n
+
 // Output Format
 // Return the minimum number of swaps to sort the given array.
 

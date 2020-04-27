@@ -37,12 +37,36 @@ function sortArray (array) {
 console.log(sortArray([5, 3, 2, 8, 1, 4])) // [1, 3, 2, 8, 5, 4]
 console.log(sortArray([5, 3, 1, 8, 0])) // [1, 3, 5, 8, 0]
 
-// Solution 2 using filter and map
+// Solution 2 alternate way to use for loop
 
 function sortArray1 (array) {
-  const odd = array.filter(x => x % 2).sort((a, b) => a - b)
-  return array.map(x => x % 2 ? odd.shift() : x)
+  const odd = []
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 !== 0) {
+      odd.push(array[i])
+    }
+  }
+
+  odd.sort((a, b) => a - b)
+
+  for (let j = 0; j < array.length; j++) {
+    if (array[j] % 2 !== 0) {
+      array[j] = odd.shift()
+    }
+  }
+  return array
 }
 
 console.log(sortArray1([5, 3, 2, 8, 1, 4])) // [1, 3, 2, 8, 5, 4]
 console.log(sortArray1([5, 3, 1, 8, 0])) // [1, 3, 5, 8, 0]
+
+// Solution 3 using filter and map
+
+function sortArray2 (array) {
+  const odd = array.filter(x => x % 2).sort((a, b) => a - b)
+  return array.map(x => x % 2 ? odd.shift() : x)
+}
+
+console.log(sortArray2([5, 3, 2, 8, 1, 4])) // [1, 3, 2, 8, 5, 4]
+console.log(sortArray2([5, 3, 1, 8, 0])) // [1, 3, 5, 8, 0]

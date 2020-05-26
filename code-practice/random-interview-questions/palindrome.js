@@ -23,6 +23,7 @@ const isPalindrome = (string) => {
   return true
 }
 
+console.log('---- This is the first solution ----')
 console.log(isPalindrome('mom'))
 console.log(isPalindrome('pizza'))
 console.log(isPalindrome('level'))
@@ -34,14 +35,17 @@ console.log(isPalindrome('A man, a plan, a canal. Panama'))
 // Using built-in function
 // Only works with simiplier and singular words
 
-// const palindrome = string => {
-//   const regularStr = string.toLowerCase()
-//   const reverseStr = string.split('').reverse().join('')
-//   return regularStr === reverseStr
-// }
-
-// console.log(palindrome('mom'))
-// console.log(palindrome('pizza'))
-// console.log(palindrome('level'))
-// console.log(palindrome('odor'))
-// console.log(palindrome('kayak'))
+const palindrome = string => {
+  const re = /[\W_]/g
+  string = string.toLowerCase().replace(re, '')
+  const regularStr = string
+  const reverseStr = string.split('').reverse().join('')
+  return regularStr === reverseStr
+}
+console.log('---- This is the second solutions ----')
+console.log(palindrome('mom'))
+console.log(palindrome('pizza'))
+console.log(palindrome('level'))
+console.log(palindrome('odor'))
+console.log(palindrome('kayak'))
+console.log(palindrome('A man, a plan, a canal. Panama'))

@@ -74,4 +74,4 @@ const fizzBuzz3 = function (max) {
   }
 }
 
-console.log(fizzBuzz3(60))
+fizzBuzz3(60)

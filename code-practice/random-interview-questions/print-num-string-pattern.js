@@ -25,4 +25,4 @@ const makeStr = num => {
   return str
 }
 
-console.log(printNum(5))
+printNum(5)
